@@ -261,6 +261,7 @@ BenchmarkUtil.benchmarkInsertionSort     avgt   20   367265.321 ±  2278.162  ns
 1. JNI method invocation involves expensive state transition, which takes 5~6-fold of time.
 1. Transition between JVM to native environment may trigger data-copy, attention is required.
 1. Minimizing number of JNI calls matters. Do more work in each call.
+1. JNI methods are not JIT-friendly.
 
 ### Future work
 we might as well test impact of the following use-case patterns:
